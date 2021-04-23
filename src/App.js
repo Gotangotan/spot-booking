@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import NavBar from "./Components/Navbar/navbar";
 import MainPage from "./Components/MainPage/MainPage";
+import LocationRotterdam from "./Components/LocationRotterdam/LocationRotterdam";
 
 export default function BasicExample() {
     return (
@@ -16,11 +17,8 @@ export default function BasicExample() {
                     <Route exact path="/">
                         <MainPage />
                     </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/dashboard">
-                        <Dashboard />
+                    <Route path="/book">
+                        <LocationRotterdam />
                     </Route>
                 </Switch>
             </div>
