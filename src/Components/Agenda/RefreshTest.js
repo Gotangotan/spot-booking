@@ -1,27 +1,31 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
 
+
+
 const RefreshTest=()=> {
     const [posts, setPosts]=useState([])
-    const getPosts = async () => {
+    async function getPosts() {
         try {
-            const userPosts = await axios.get("http://localhost:8090/desk")
-
-            setPosts(userPosts.data.sort());  // set State
-
+            const userPosts = await axios.get("http://localhost:8090/desk",
+                {auth:{
+                        username: 'admin',
+                        password: 'password'
+                    }}
+                )
+            setPosts(userPosts.data);  // set State
             console.log(userPosts.data);
-
         } catch (err) {
             console.error(err.message);
         }
-    };
+    }
 
     useEffect(()=>{
 
         getPosts()
         const interval=setInterval(()=>{
             getPosts()
-        },5000)
+        },4000)
 
 
         return()=>clearInterval(interval)
@@ -33,7 +37,10 @@ const RefreshTest=()=> {
             "id": `${dinges}`,
             "availability":"unAvailable"}
 
-        axios.put(`http://localhost:8090/desk/${data.id}`,data)
+        axios.put(`http://localhost:8090/desk/${data.id}`,data,                {auth:{
+                username: 'admin',
+                password: 'password'
+            }})
             .then((data) => {
 
             })
@@ -48,7 +55,12 @@ const RefreshTest=()=> {
             "id": `${dinges}`,
             "availability":"Available"}
 
-        axios.put(`http://localhost:8090/desk/${data.id}`,data)
+        axios.put(`http://localhost:8090/desk/${data.id}`,data,{auth:{
+                    username: 'admin',
+                    password: 'password'
+                }}
+
+            )
             .then((data) => {
 
             })
@@ -59,24 +71,21 @@ const RefreshTest=()=> {
     }
 
 
-
     return (
         <>
             <div>
                 <h1>useEffect</h1>
 
                 {posts.map(post=>(
-                    <p key={post.id}>{post.id} {post.desk} {post.availability}
+                    <p key={post.id}>{post.id} {post.date.date} {post.desk} {post.availability}
                         <button onClick={() => AgendaSubmit(post.id)} >Reserveren</button>
                         <button onClick={() => AgendaCancel(post.id)} >Cancel</button>
                     </p>
-
                 ))}
 
             </div>
 
         </>
-
 
     );
 }

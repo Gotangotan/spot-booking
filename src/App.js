@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css"
 import {
     BrowserRouter as Router,
     Switch,
@@ -29,27 +30,11 @@ export default function BasicExample() {
                     <Route path="/agendaPut">
                         <AgendaPut />
                     </Route>
+                    <Route path="/RefreshTest">
+                        <RefreshTest />
+                    </Route>
                 </Switch>
-                <Route path="/RefreshTest">
-                    <RefreshTest />
-                </Route>
             </div>
         </Router>
-    );
-}
-
-function About() {
-    return (
-        <div>
-            <h2>About</h2>
-        </div>
-    );
-}
-
-function Dashboard() {
-    return (
-        <div>
-            <h2>Dashboard</h2>
-        </div>
     );
 }

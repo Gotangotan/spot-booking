@@ -1,0 +1,41 @@
+.FlexContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%;
+    background-color: #F7F7F7;
+    height: 80vh;
+    overflow: auto;
+    flex-direction: row;
+
+}
+
+.FlexItem {
+    width: 500px;
+    height: 400px;
+    margin: 0px;
+    background-color: #F7F7F7;
+    border: 1px solid lightgrey;
+    box-shadow: 2px 2px grey;
+    padding: 40px;
+    justify-content: center;
+
+}
+
+.ColumnRight {
+    background-color: white;
+
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

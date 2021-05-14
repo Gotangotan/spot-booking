@@ -8,3 +8,13 @@ li {
     display: inline;
     padding: 10px;
 }
+
+.Nav-container{
+    width: 100%;
+    max-width: 500px;
+    height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: auto;
+}
