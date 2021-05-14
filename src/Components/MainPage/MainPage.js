@@ -11,7 +11,7 @@ function MainPage() {
                     <p>Through this website you can reserve a desk at your office.</p>
                 </div>
                 <div className='FlexItem ColumnRight'>
-                    <Link className='button' to="/book">Home</Link>
+                    <Link className='button' to="/Booking">Go book your spot</Link>
                 </div>
             </section>
         </>

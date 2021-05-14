@@ -10,7 +10,7 @@ import MainPage from "./Components/MainPage/MainPage";
 import LocationRotterdam from "./Components/LocationRotterdam/LocationRotterdam";
 import Agenda from "./Components/Agenda/Agenda";
 import AgendaPut from "./Components/Agenda/AgendaPut";
-import RefreshTest from "./Components/Agenda/RefreshTest";
+import Booking from "./Components/Agenda/Booking";
 
 export default function BasicExample() {
     return (
@@ -30,8 +30,8 @@ export default function BasicExample() {
                     <Route path="/agendaPut">
                         <AgendaPut />
                     </Route>
-                    <Route path="/RefreshTest">
-                        <RefreshTest />
+                    <Route path="/Booking">
+                        <Booking />
                     </Route>
                 </Switch>
             </div>

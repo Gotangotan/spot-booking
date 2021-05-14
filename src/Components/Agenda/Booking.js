@@ -1,9 +1,9 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
+import './Booking.css'
 
 
-
-const RefreshTest=()=> {
+const Booking=()=> {
     const [posts, setPosts]=useState([])
     async function getPosts() {
         try {
@@ -73,7 +73,7 @@ const RefreshTest=()=> {
 
     return (
         <>
-            <div>
+            <div className='container'>
                 <h1>useEffect</h1>
 
                 {posts.map(post=>(
@@ -90,4 +90,4 @@ const RefreshTest=()=> {
     );
 }
 
-export default RefreshTest
+export default Booking

@@ -20,7 +20,7 @@ function NavBar() {
                         <Link to="/AgendaPut">AgendaPut</Link>
                     </li>
                     <li>
-                        <Link to="/RefreshTest">RefreshTest</Link>
+                        <Link to="/Booking">Booking</Link>
                     </li>
                 </ul>
             </div>
