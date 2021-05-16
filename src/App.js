@@ -13,6 +13,7 @@ import AgendaPut from "./Components/Agenda/AgendaPut";
 import Booking from "./Components/Agenda/Booking";
 import Home from "./Components/MainPage/Home";
 import Header from "./Components/Header/Header";
+import SignIn from "./Components/Login/SignIn";
 
 
 export default function BasicExample() {
@@ -23,6 +24,12 @@ export default function BasicExample() {
                 <Switch>
                     <Route exact path="/">
                         <Home />
+                    </Route>
+                    <Route exact path="/signin">
+                        <SignIn />
+                    </Route>
+                    <Route exact path="/signup">
+                        <SignUp />
                     </Route>
                     <Route exact path="/">
                         <MainPage />
