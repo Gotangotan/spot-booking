@@ -9,7 +9,7 @@ const Booking=()=> {
         try {
             const userPosts = await axios.get("http://localhost:8090/desk",
                 {auth:{
-                        username: 'admin',
+                        username: 'tan',
                         password: 'password'
                     }}
                 )
@@ -32,9 +32,9 @@ const Booking=()=> {
     },[])
 
 
-    function AgendaSubmit(dinges) {
+    function AgendaSubmit(id) {
         const data = {
-            "id": `${dinges}`,
+            "id": `${id}`,
             "availability":"unAvailable"}
 
         axios.put(`http://localhost:8090/desk/${data.id}`,data,                {auth:{
@@ -50,9 +50,9 @@ const Booking=()=> {
         getPosts()
     }
 
-    function AgendaCancel(dinges) {
+    function AgendaCancel(id) {
         const data = {
-            "id": `${dinges}`,
+            "id": `${id}`,
             "availability":"Available"}
 
         axios.put(`http://localhost:8090/desk/${data.id}`,data,{auth:{
@@ -74,7 +74,7 @@ const Booking=()=> {
     return (
         <>
             <div className='container'>
-                <h1>useEffect</h1>
+                <h1>Reserve your spot.</h1>
 
                 {posts.map(post=>(
                     <p key={post.id}>{post.id} {post.date.date} {post.desk} {post.availability}

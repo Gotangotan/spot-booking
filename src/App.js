@@ -11,13 +11,19 @@ import LocationRotterdam from "./Components/LocationRotterdam/LocationRotterdam"
 import Agenda from "./Components/Agenda/Agenda";
 import AgendaPut from "./Components/Agenda/AgendaPut";
 import Booking from "./Components/Agenda/Booking";
+import Home from "./Components/MainPage/Home";
+import Header from "./Components/Header/Header";
+
 
 export default function BasicExample() {
     return (
         <Router>
-            <div>
-                <NavBar/>
+            <Header />
+            <div className="content">
                 <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
                     <Route exact path="/">
                         <MainPage />
                     </Route>
@@ -33,6 +39,7 @@ export default function BasicExample() {
                     <Route path="/Booking">
                         <Booking />
                     </Route>
+
                 </Switch>
             </div>
         </Router>

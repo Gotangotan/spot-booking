@@ -11,15 +11,6 @@ function NavBar() {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/book">Book a spot</Link>
-                    </li>
-                    <li>
-                        <Link to="/Agenda">Agenda</Link>
-                    </li>
-                    <li>
-                        <Link to="/AgendaPut">AgendaPut</Link>
-                    </li>
-                    <li>
                         <Link to="/Booking">Booking</Link>
                     </li>
                 </ul>
