@@ -1,12 +1,27 @@
-import React from 'react';
+import React, {} from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import axios from "axios";
 
 function SignIn() {
     const { handleSubmit, register } = useForm();
+    const history = useHistory()
 
-    function onSubmit(data) {
-        console.log(data);
+  async function onSubmit(data) {
+      console.log(data)
+        try{
+            const result = await axios.get('http://localhost:8090/users/'+data.username, {
+                username : data.username,
+                password : data.password
+            });
+            console.log('result?',result.data)
+            localStorage.setItem('user',result.data.username)
+
+            history.push('/Profile')
+        }
+        catch (e) {
+            console.error(e)
+        }
     }
 
     return (
@@ -15,13 +30,13 @@ function SignIn() {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias cum debitis dolor dolore fuga id molestias qui quo unde?</p>
 
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label htmlFor="email-field">
-                    Emailadres:
+                <label htmlFor="username">
+                    Username:
                     <input
-                        type="email"
-                        id="email-field"
-                        name="email"
-                        {...register("email")}
+                        type="username"
+                        id="username"
+                        name="username"
+                        {...register("username")}
                     />
                 </label>
 

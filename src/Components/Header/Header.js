@@ -13,12 +13,12 @@ function Header() {
         >
           Log in
         </button>
-        <button
-          type="button"
-          onClick={() => history.push('/signup')}
-        >
-          Registreren
-        </button>
+        {/*<button*/}
+        {/*  type="button"*/}
+        {/*  onClick={() => history.push('/signup')}*/}
+        {/*>*/}
+        {/*  Registreren*/}
+        {/*</button>*/}
       </div>
     </header>
   );
