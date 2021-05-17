@@ -20,7 +20,7 @@ function SignIn() {
 
             login(result.data.username)
 
-            localStorage.setItem('user',result.data.username)
+
 
             history.push('/Profile')
         }

@@ -12,6 +12,7 @@ function AuthContextProvider({ children }) {
 
     function loginFunction(userName){
         console.log('LOGIN!',userName)
+        localStorage.setItem('user',userName)
     }
 
     function logoutFunction(){
