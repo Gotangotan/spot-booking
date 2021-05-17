@@ -1,9 +1,11 @@
-import React, {} from 'react';
+import React, {useContext} from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useHistory } from 'react-router-dom';
 import axios from "axios";
+import {AuthContext} from "../context/AuthContext";
 
 function SignIn() {
+    const { login } = useContext(AuthContext)
     const { handleSubmit, register } = useForm();
     const history = useHistory()
 
@@ -15,6 +17,9 @@ function SignIn() {
                 password : data.password
             });
             console.log('result?',result.data)
+
+            login(result.data.username)
+
             localStorage.setItem('user',result.data.username)
 
             history.push('/Profile')
