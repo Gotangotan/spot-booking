@@ -38,7 +38,8 @@ const Booking=()=> {
         const data = {
             "id": `${id}`,
             "availability":"Unvailable",
-            "username": `${user.username}`
+            "username": `${user.username}`,
+            "email": `${user.email}`
         }
 
         axios.put(`http://localhost:8090/desk/${data.id}`,data,                {auth:{
