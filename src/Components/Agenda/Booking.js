@@ -1,10 +1,12 @@
-import React,{useEffect,useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import axios from 'axios'
 import './Booking.css'
+import {AuthContext} from "../context/AuthContext";
 
 
 const Booking=()=> {
     const [posts, setPosts]=useState([])
+    const { user }  = useContext( AuthContext );
     async function getPosts() {
         try {
             const userPosts = await axios.get("http://localhost:8090/desk",
@@ -14,7 +16,7 @@ const Booking=()=> {
                     }}
                 )
             setPosts(userPosts.data);  // set State
-            console.log(userPosts.data);
+            console.log('USER ON BOOKINGPAGE', user);
         } catch (err) {
             console.error(err.message);
         }
@@ -35,7 +37,9 @@ const Booking=()=> {
     function AgendaSubmit(id) {
         const data = {
             "id": `${id}`,
-            "availability":"unAvailable"}
+            "availability":"Unvailable",
+            "username": `${user.username}`
+        }
 
         axios.put(`http://localhost:8090/desk/${data.id}`,data,                {auth:{
                 username: 'admin',
@@ -77,7 +81,7 @@ const Booking=()=> {
                 <h1>Reserve your spot.</h1>
 
                 {posts.map(post=>(
-                    <p key={post.id}>{post.id} {post.date.date} {post.desk} {post.availability}
+                    <p key={post.id}>{post.id} {post.date.date} {post.desk} {post.availability} booked by {post.username}
                         <button onClick={() => AgendaSubmit(post.id)} >Reserveren</button>
                         <button onClick={() => AgendaCancel(post.id)} >Cancel</button>
                     </p>

@@ -1,5 +1,6 @@
-import React, {createContext, useState} from "react";
+import React, {createContext, useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
+import axios from "axios";
 
 
 export const AuthContext = createContext({})
@@ -9,11 +10,40 @@ function AuthContextProvider({ children }) {
     const history = useHistory()
     const [authState, setAuthState] = useState({
         user: null,
-    })
+        status: 'pending',
+    });
 
-    function loginFunction(userName){
+    useEffect(()=>{
+        setAuthState({
+            user: null,
+            status: 'done',
+        });
+    },[]);
+
+    async function loginFunction(userName){
         console.log('LOGIN!',userName);
         localStorage.setItem('user',userName);
+
+
+        try{
+            const result = await axios.get(`http://localhost:8090/users/${userName}`, {
+            });
+            console.log('result?',result)
+            setAuthState({
+            user:{
+                username:result.data.username,
+                email:result.data.email,
+                },
+            status: 'done'
+            })
+            console.log('setAuthState?',setAuthState)
+        }
+        catch (e) {
+            console.error(e)
+        }
+
+
+
     }
 
     function logoutFunction(){
@@ -28,7 +58,8 @@ function AuthContextProvider({ children }) {
 
     return (
         <AuthContext.Provider value={data}>
-            { children }
+            { authState.status === 'done' ? children : <p>fout</p>
+            }
         </AuthContext.Provider>
     );
 }

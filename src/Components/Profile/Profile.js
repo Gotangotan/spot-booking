@@ -1,21 +1,21 @@
 import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from "../context/AuthContext";
+import Booking from "../Agenda/Booking";
 
 function Profile() {
     const { user }  = useContext( AuthContext );
     console.log( 'user', user )
     return (
         <>
-            <h1>Profielpagina</h1>
+            <h1>Book a spot</h1>
             <section>
-                <h2>Gegevens</h2>
-                <p><strong>Gebruikersnaam:</strong> hardcoded-test</p>
-                <p><strong>Email:</strong> hardcoded@test.com</p>
+                <h2>for user</h2>
+                <p><strong>Username: {user.username}</strong> </p>
+                <p><strong>Email:</strong> {user.email}</p>
             </section>
             <section>
-                <h2>Afgeschermde content voor ingelogde gebruikers</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias cum debitis dolor dolore fuga id molestias qui quo unde?</p>
+            <Booking/>
             </section>
             <p>Terug naar de <Link to="/">Homepagina</Link></p>
         </>
