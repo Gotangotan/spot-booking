@@ -1,18 +1,19 @@
 import React, {createContext, useState} from "react";
+import {useHistory} from "react-router-dom";
 
 
 export const AuthContext = createContext({})
 
 
 function AuthContextProvider({ children }) {
-
+    const history = useHistory()
     const [authState, setAuthState] = useState({
         user: null,
     })
 
     function loginFunction(userName){
-        console.log('LOGIN!',userName)
-        localStorage.setItem('user',userName)
+        console.log('LOGIN!',userName);
+        localStorage.setItem('user',userName);
     }
 
     function logoutFunction(){

@@ -20,8 +20,6 @@ function SignIn() {
 
             login(result.data.username)
 
-
-
             history.push('/Profile')
         }
         catch (e) {
