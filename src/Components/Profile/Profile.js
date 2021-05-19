@@ -1,23 +1,33 @@
 import React, {useContext} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect  } from 'react-router-dom';
 import { AuthContext } from "../context/AuthContext";
 import Booking from "../Agenda/Booking";
 
+
+
+function Logout() {
+
+    localStorage.clear()
+
+
+}
+
 function Profile() {
     const { user }  = useContext( AuthContext );
-    console.log( 'user', user )
+    console.log('user?',user)
+
     return (
         <>
             <h1>Book a spot</h1>
             <section>
-                <h2>for user</h2>
-                <p><strong>Username: {user.username}</strong> </p>
-                <p><strong>Email:</strong> {user.email}</p>
+                <p><strong>Username: {user && user.username}</strong> </p>
+                <p><strong>Email: {user && user.email}</strong> </p>      <h2>for user</h2>
             </section>
             <section>
             <Booking/>
             </section>
-            <p>Terug naar de <Link to="/">Homepagina</Link></p>
+            <button onClick={() => Logout()}>Uitloggen</button>
+
         </>
     );
 }

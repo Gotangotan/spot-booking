@@ -16,7 +16,7 @@ const Booking=()=> {
                     }}
                 )
             setPosts(userPosts.data);  // set State
-            console.log('USER ON BOOKINGPAGE', user);
+
         } catch (err) {
             console.error(err.message);
         }
@@ -82,10 +82,10 @@ const Booking=()=> {
                 <h1>Reserve your spot.</h1>
 
                 {posts.map(post=>(
-                    <p key={post.id}>{post.id} {post.date.date} {post.desk} {post.availability} booked by {post.username}
+                    <div  key={post.id}>{post.id} {post.date.date} {post.desk} {post.availability}
                         <button onClick={() => AgendaSubmit(post.id)} >Reserveren</button>
                         <button onClick={() => AgendaCancel(post.id)} >Cancel</button>
-                    </p>
+                    </div>
                 ))}
 
             </div>

@@ -13,7 +13,43 @@ function AuthContextProvider({ children }) {
         status: 'pending',
     });
 
+    async function fetchUserData(userName){
+
+        //gebruikersdata ophalen
+        try{
+            const result = await axios.get(`http://localhost:8090/users/${userName}`, {
+            });
+
+            // wat krijgen we binnen?
+            console.log('result?',result)
+
+            // de date gebruiken om de context te vullen
+            setAuthState({
+                user:{
+                    username:result.data.username,
+                    email:result.data.email,
+                },
+                status: 'done'
+            })
+            // console.log('setAuthState?',setAuthState)
+        }
+        catch (e) {
+            console.error(e)
+        }
+    }
+
+
+    // wanneer de applicatie geladen wordt willen we checken of er een user is
     useEffect(()=>{
+        // is er een user?
+        const user = localStorage.getItem('user');
+        if (user !== undefined){
+            console.log('er is een user')
+        }
+        // haal dan de data op
+        fetchUserData(user)
+
+        // zo nee, dan geen user, maar wel status op done
         setAuthState({
             user: null,
             status: 'done',
@@ -21,33 +57,15 @@ function AuthContextProvider({ children }) {
     },[]);
 
     async function loginFunction(userName){
-        console.log('LOGIN!',userName);
         localStorage.setItem('user',userName);
-
-
-        try{
-            const result = await axios.get(`http://localhost:8090/users/${userName}`, {
-            });
-            console.log('result?',result)
-            setAuthState({
-            user:{
-                username:result.data.username,
-                email:result.data.email,
-                },
-            status: 'done'
-            })
-            console.log('setAuthState?',setAuthState)
-        }
-        catch (e) {
-            console.error(e)
-        }
-
-
-
+        fetchUserData(userName);
     }
 
     function logoutFunction(){
-        console.log('LOGOUT!')
+        // localstorage leeghalen
+        localStorage.clear()
+        history.push('/')
+        // user in de context weer op null zetten
     }
 
     const data = {
