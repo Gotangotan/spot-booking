@@ -90,18 +90,14 @@ function Booking() {
                     username: 'admin',
                     password: 'password'
                 }}
-
             )
             .then((data) => {
-
             })
             .catch((err) => {
                 console.log(err);
             })
         getPosts()
     }
-
-
 
     return (
         <>
@@ -123,9 +119,13 @@ function Booking() {
                 <h1>Pick a desk </h1>
                 <h2>{filter}</h2>
                 {posts && posts.filter(post => post.date.date === filter).map(post=>(
-                    <div key={post.id}>{post.id} datum:{post.date.date} {post.desk} {post.availability}
-                        <button onClick={() => AgendaSubmit(post.id)} >I want to sit at {post.desk} </button>
-                        <button onClick={() => AgendaCancel(post.id)} >Cancel</button>
+                    <div key={post.id}>
+
+                        { post.availability === 'Available' ?   <button className='button button1' onClick={() => AgendaSubmit(post.id)} >{post.desk}  is available </button> : <button className='button button3' onClick={() => AgendaCancel(post.id)} >{post.desk} is unavailable </button>
+                        }
+                        {/*{ post.availability === 'Unvailable' ? <button onClick={() => AgendaCancel(post.id)} >Cancel</button> : null*/}
+                        {/*}*/}
+
                     </div>
                 ))}
 
