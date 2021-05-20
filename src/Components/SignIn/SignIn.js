@@ -10,7 +10,7 @@ function SignIn() {
     const history = useHistory()
 
   async function onSubmit(data) {
-      console.log(data)
+      console.log('data?',data)
         try{
             const result = await axios.get('http://localhost:8090/users/'+data.username, {
                 username : data.username,

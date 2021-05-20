@@ -3,10 +3,34 @@ import axios from 'axios'
 import './Booking.css'
 import {AuthContext} from "../context/AuthContext";
 
-
-const Booking=()=> {
+function Booking() {
     const [posts, setPosts]=useState([])
-    const { user }  = useContext( AuthContext );
+    const [dates, setDates]=useState([])
+    const [filter, setFilterDate]=useState([])
+    const { user }  = useContext(AuthContext);
+
+
+    async function getDates() {
+        try {
+            const userDates = await axios.get("http://localhost:8090/date",
+                {auth:{
+                        username: 'tan',
+                        password: 'password'
+                    }}
+            )
+            setDates(userDates.data);  // set State
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+
+    function selectDate(selectedDate){
+        console.log('selectedDate',selectedDate)
+        setFilterDate(selectedDate)
+        console.log('filterDate',filter)
+
+    }
+
     async function getPosts() {
         try {
             const userPosts = await axios.get("http://localhost:8090/desk",
@@ -16,6 +40,7 @@ const Booking=()=> {
                     }}
                 )
             setPosts(userPosts.data);  // set State
+            console.log('posts',setPosts)
 
         } catch (err) {
             console.error(err.message);
@@ -23,7 +48,10 @@ const Booking=()=> {
     }
 
     useEffect(()=>{
+        getDates()
+    },[])
 
+    useEffect(()=>{
         getPosts()
         const interval=setInterval(()=>{
             getPosts()
@@ -46,9 +74,7 @@ const Booking=()=> {
                 username: 'admin',
                 password: 'password'
             }})
-            .then((data) => {
 
-            })
             .catch((err) => {
                 console.log(err);
             })
@@ -76,13 +102,28 @@ const Booking=()=> {
     }
 
 
+
     return (
+
         <>
             <div className='container'>
-                <h1>Reserve your spot.</h1>
+                <h1>Select date</h1>
 
-                {posts.map(post=>(
-                    <div  key={post.id}>{post.id} {post.date.date} {post.desk} {post.availability}
+
+                {dates.map(date=>(
+                    <div key={date.id} onClick={()=> selectDate(date.date)}> {date.date}
+                    </div>
+                ))}
+
+            </div>
+
+
+
+
+            <div className='container'>
+                <h1>Select desk</h1>
+                {posts.filter(post => post.date.date === filter).map(post=>(
+                    <div key={post.id}>{post.id} datum:{post.date.date} {post.desk} {post.availability}
                         <button onClick={() => AgendaSubmit(post.id)} >Reserveren</button>
                         <button onClick={() => AgendaCancel(post.id)} >Cancel</button>
                     </div>
@@ -95,4 +136,5 @@ const Booking=()=> {
     );
 }
 
-export default Booking
+
+export default Booking;

@@ -5,7 +5,6 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import NavBar from "./Components/Navbar/navbar";
 import MainPage from "./Components/MainPage/MainPage";
 import LocationRotterdam from "./Components/LocationRotterdam/LocationRotterdam";
 import Agenda from "./Components/Agenda/Agenda";
@@ -16,6 +15,8 @@ import Header from "./Components/Header/Header";
 import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import Profile from "./Components/Profile/Profile";
+import Dates from "./Components/Agenda/Dates";
+import Booking2_radiobuttons from "./Components/Agenda/Booking2_radiobuttons";
 
 
 export default function BasicExample() {
@@ -49,7 +50,10 @@ export default function BasicExample() {
                         <AgendaPut />
                     </Route>
                     <Route path="/Booking">
-                        <Booking />
+                        <Booking2_radiobuttons />
+                    </Route>
+                    <Route path="/Dates">
+                        <Dates />
                     </Route>
                 </Switch>
             </div>
