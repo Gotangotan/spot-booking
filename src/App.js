@@ -16,7 +16,7 @@ import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import Profile from "./Components/Profile/Profile";
 import Dates from "./Components/Agenda/Dates";
-import Booking2_radiobuttons from "./Components/Agenda/Booking2_radiobuttons";
+
 
 
 export default function BasicExample() {
@@ -50,7 +50,7 @@ export default function BasicExample() {
                         <AgendaPut />
                     </Route>
                     <Route path="/Booking">
-                        <Booking2_radiobuttons />
+                        <Booking />
                     </Route>
                     <Route path="/Dates">
                         <Dates />

@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import './MainPage.css'
+import './Home.css'
+
 
 function Home() {
     const history = useHistory();
     return (
         <>
-            <h1>Welcome to the Officedays booking tool</h1>
+            <div className='container'>
+            <h1>Welcome to the Spot booking tool</h1>
             <p>Through this website you can reserve a desk at the office.</p>
             <button
                 type="button"
@@ -21,6 +25,7 @@ function Home() {
                 Signup
             </button>
             <p>Je kunt ook <Link to="/signin">inloggen</Link> of jezelf <Link to="/signup">registeren</Link> als je nog geen account hebt.</p>
+            </div>
         </>
     );
 }

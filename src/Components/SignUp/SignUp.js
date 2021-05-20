@@ -30,7 +30,8 @@ function SignUp() {
                         type="text"
                         id="username-field"
                         name="username"
-                        {...register("username")}
+                        {...register("username",{required: true})}
+
                     />
                 </label>
 

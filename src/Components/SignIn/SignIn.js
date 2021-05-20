@@ -39,24 +39,24 @@ function SignIn() {
                         type="username"
                         id="username"
                         name="username"
-                        {...register("username")}
+                        {...register("username",{required: true})}
                     />
                 </label>
 
-                <label htmlFor="password-field">
-                    Wachtwoord:
-                    <input
-                        type="password"
-                        id="password-field"
-                        name="password"
-                        {...register("password")}
-                    />
-                </label>
+                {/*<label htmlFor="password-field">*/}
+                {/*    Wachtwoord:*/}
+                {/*    <input*/}
+                {/*        type="password"*/}
+                {/*        id="password-field"*/}
+                {/*        name="password"*/}
+                {/*        {...register("password")}*/}
+                {/*    />*/}
+                {/*</label>*/}
                 <button
                     type="submit"
                     className="form-button"
                 >
-                    Inloggen
+                    Start booking
                 </button>
             </form>
             <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>

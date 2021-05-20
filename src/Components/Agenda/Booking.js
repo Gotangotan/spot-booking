@@ -104,27 +104,27 @@ function Booking() {
 
 
     return (
-
         <>
-            <div className='container'>
-                <h1>Select date</h1>
-
-
-                {dates.map(date=>(
-                    <div key={date.id} onClick={()=> selectDate(date.date)}> {date.date}
-                    </div>
+        <div className='container'>
+            <h1>First, when would you like to come to the office?</h1>
+            <div className='parent'>
+                {dates && dates.map(date=>(
+                    <button
+                        className='button button1'
+                        key={date.id}
+                        onClick={()=> selectDate(date.date)}>
+                        {date.date}
+                    </button>
                 ))}
-
             </div>
-
-
-
+        </div>
 
             <div className='container'>
-                <h1>Select desk</h1>
-                {posts.filter(post => post.date.date === filter).map(post=>(
+                <h1>Pick a desk </h1>
+                <h2>{filter}</h2>
+                {posts && posts.filter(post => post.date.date === filter).map(post=>(
                     <div key={post.id}>{post.id} datum:{post.date.date} {post.desk} {post.availability}
-                        <button onClick={() => AgendaSubmit(post.id)} >Reserveren</button>
+                        <button onClick={() => AgendaSubmit(post.id)} >I want to sit at {post.desk} </button>
                         <button onClick={() => AgendaCancel(post.id)} >Cancel</button>
                     </div>
                 ))}
