@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
+import './SignIn.css'
 
 function SignIn() {
     const { login } = useContext(AuthContext)
@@ -35,14 +36,14 @@ function SignIn() {
 
     return (
         <>
-            <h1>Inloggen</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias cum debitis dolor dolore fuga id molestias qui quo unde?</p>
-
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='container'>
+            <h1>Let's get started</h1>
+            <h2>So? What's your username?</h2>
+            <form className='form_signup' onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="username">
-                    Username:
+                    Me: 'Yes hello database... <br/>I've already signed up before. <br/><br/>You will find me by looking for username'
                     <input
-                        type="username"
+                        type="text"
                         id="username"
                         name="username"
                         {...register("username",{required: true})}
@@ -60,13 +61,26 @@ function SignIn() {
                 {/*</label>*/}
                 <button
                     type="submit"
-                    className="form-button"
+                    className="button button1"
                 >
-                    Start booking
+                    Fetch me!
                 </button>
 
 
             </form>
+            </div>
+
+            <div className='container'>
+                <h1>Are you sure you've signed up before?</h1>
+                <h2>No? That's oke. You can still sign up! <br/> There's enough space in the cloud.</h2>
+                <button
+                    className='button button1'
+                    type="button"
+                    onClick={() => history.push('/signup')}
+                >
+                    Sign up
+                </button>
+            </div>
 </>
     );
 }

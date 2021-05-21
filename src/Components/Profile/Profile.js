@@ -6,7 +6,7 @@ import './Profile.css'
 
 function Profile() {
     const { user }  = useContext( AuthContext );
-    console.log('user?',user)
+    // console.log('user?',user)
     return (
         <>
             <div className='container'>

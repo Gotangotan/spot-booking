@@ -13,11 +13,7 @@ function Confirmation(){
             const confirmation = await axios.get('http://localhost:8090/desk/', {
 
             });
-
-            console.log('confirmation',confirmation.data)
             setUserConfirmation(confirmation.data)
-            console.log('userConfirmation',userConfirmation)
-
         }
         catch (e) {
             console.error(e)
@@ -25,7 +21,11 @@ function Confirmation(){
     }
     useEffect(()=>{
         getConfirmation()
-    },[getConfirmation])
+        const interval=setInterval(()=>{
+            getConfirmation()
+        },2000)
+        return()=>clearInterval(interval)
+    },[])
 
     function AgendaCancel(id) {
         const data = {

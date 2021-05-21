@@ -21,7 +21,7 @@ function AuthContextProvider({ children }) {
             });
 
             // wat krijgen we binnen?
-            console.log('result?',result)
+            // console.log('result?',result)
 
             // de date gebruiken om de context te vullen
             setAuthState({
@@ -44,7 +44,7 @@ function AuthContextProvider({ children }) {
         // is er een user?
         const user = localStorage.getItem('user');
         if (user !== undefined){
-            console.log('er is een user')
+            // console.log('er is een user')
         }
         // haal dan de data op
         fetchUserData(user)

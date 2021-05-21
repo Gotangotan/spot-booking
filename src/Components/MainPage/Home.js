@@ -12,6 +12,7 @@ function Home() {
             <h1>Welcome to the Spot booking tool</h1>
             <p>Through this website you can reserve a desk at the office.</p>
             <button
+                className='button button1'
                 type="button"
                 onClick={() => history.push('/signin')}
             >
@@ -19,6 +20,7 @@ function Home() {
             </button>
 
             <button
+                className='button button1'
                 type="button"
                 onClick={() => history.push('/signup')}
             >

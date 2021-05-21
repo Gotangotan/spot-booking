@@ -3,7 +3,7 @@ import axios from 'axios'
 import './Booking.css'
 import {AuthContext} from "../context/AuthContext";
 import { useHistory } from 'react-router-dom';
-import Confirmation from "../Confirmation/Confirmation";
+
 
 function Booking() {
     const [posts, setPosts]=useState([])
@@ -22,6 +22,7 @@ function Booking() {
                     }}
             )
             setDates(userDates.data);  // set State
+
         } catch (err) {
             console.error(err.message);
         }
@@ -117,7 +118,7 @@ function Booking() {
 
 
             <div className='container'>
-                <h1>Pick a desk </h1>
+                <h1>Then, pick a desk </h1>
                 <h2>{filter}</h2>
                 {posts && posts.filter(post => post.date.date === filter).map(post=>(
 
