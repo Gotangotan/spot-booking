@@ -12,11 +12,10 @@ function SignIn() {
 
 
   async function onSubmit(data) {
-      console.log('data input?',data)
+      // console.log('data input?',data)
         try{
             const result = await axios.get('http://localhost:8090/users/'+data.username, {
-                username : data.username,
-                password : data.password
+                username : data.username
             });
 
             console.log('result username?',result.data.username)
@@ -24,7 +23,6 @@ function SignIn() {
             if (result.data.username === data.username){
                 console.log('known');
             }
-
 
             login(result.data.username)
             history.push('/Profile')

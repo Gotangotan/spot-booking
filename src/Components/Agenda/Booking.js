@@ -62,7 +62,7 @@ function Booking() {
     },[])
 
 
-    function AgendaSubmit(id) {
+    async function AgendaSubmit(id) {
         const data = {
             "id": `${id}`,
             "availability":"Unvailable",
