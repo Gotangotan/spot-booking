@@ -16,6 +16,7 @@ import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import Profile from "./Components/Profile/Profile";
 import Dates from "./Components/Agenda/Dates";
+import Confirmation from "./Components/Confirmation/Confirmation";
 
 
 
@@ -54,6 +55,9 @@ export default function BasicExample() {
                     </Route>
                     <Route path="/Dates">
                         <Dates />
+                    </Route>
+                    <Route path="/Confirmation">
+                        <Confirmation />
                     </Route>
                 </Switch>
             </div>

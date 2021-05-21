@@ -1,25 +1,31 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import axios from "axios";
-import {AuthContext} from "../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
 function SignIn() {
     const { login } = useContext(AuthContext)
     const { handleSubmit, register } = useForm();
     const history = useHistory()
 
+
   async function onSubmit(data) {
-      console.log('data?',data)
+      console.log('data input?',data)
         try{
             const result = await axios.get('http://localhost:8090/users/'+data.username, {
                 username : data.username,
                 password : data.password
             });
-            console.log('result?',result.data)
+
+            console.log('result username?',result.data.username)
+            console.log('input username?',data.username)
+            if (result.data.username === data.username){
+                console.log('known');
+            }
+
 
             login(result.data.username)
-
             history.push('/Profile')
         }
         catch (e) {
@@ -58,9 +64,10 @@ function SignIn() {
                 >
                     Start booking
                 </button>
+
+
             </form>
-            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
-        </>
+</>
     );
 }
 
