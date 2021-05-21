@@ -4,6 +4,11 @@ import { useHistory } from 'react-router-dom';
 function Header() {
   const history = useHistory();
 
+    function Logout() {
+        localStorage.clear();
+        window.location.href = '/';
+    }
+
   return (
     <header>
       <div>
@@ -13,6 +18,12 @@ function Header() {
         >
           Log in
         </button>
+          <button
+              type="button"
+              onClick={() => Logout()}
+          >
+              Log out
+          </button>
         {/*<button*/}
         {/*  type="button"*/}
         {/*  onClick={() => history.push('/signup')}*/}

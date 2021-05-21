@@ -24,7 +24,6 @@ function Home() {
             >
                 Signup
             </button>
-            <p>Je kunt ook <Link to="/signin">inloggen</Link> of jezelf <Link to="/signup">registeren</Link> als je nog geen account hebt.</p>
             </div>
         </>
     );

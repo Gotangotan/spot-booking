@@ -41,7 +41,6 @@ function Booking() {
             )
             setPosts(userPosts.data);  // set State
             console.log('posts',setPosts)
-
         } catch (err) {
             console.error(err.message);
         }
@@ -78,7 +77,6 @@ function Booking() {
                 console.log(err);
             })
         getPosts()
-
         history.push('/Confirmation')
     }
 
@@ -127,11 +125,11 @@ function Booking() {
                         { post.availability === 'Available' ?
                             <button className='button button1' onClick={() => AgendaSubmit(post.id)} >{post.desk}  is available </button>
                             :
-                            <button className='button button3' >{post.desk} is unavailable </button>
+                            <button className='button button3'>{post.desk} is unavailable </button>
                         }
                     </div>
-                ))}
 
+                ))}
             </div>
 
         </>
