@@ -3,6 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import { useHistory } from 'react-router-dom';
 import axios from "axios";
 
+
 function Confirmation(){
     const { user }  = useContext( AuthContext );
     const [userConfirmation, setUserConfirmation]=useState([])
@@ -27,7 +28,7 @@ function Confirmation(){
         return()=>clearInterval(interval)
     },[])
 
-    function AgendaCancel(id) {
+    function bookingCancel(id) {
         const data = {
             "id": `${id}`,
             "availability":"Available"}
@@ -36,7 +37,6 @@ function Confirmation(){
                 username: 'admin',
                 password: 'password'
             }}
-
         )
             .then((data) => {
             })
@@ -52,7 +52,7 @@ function Confirmation(){
                 <h1>Alright { user && user.username }!</h1>
                 <h2>Your booked desk</h2>
                 {userConfirmation && userConfirmation.filter(post=>post.username === user.username ).map(post=>(
-                    <button className='button button3' onClick={() => AgendaCancel(post.id)}  key={post.id}>Cancel {post.desk} {post.date.date} </button>
+                    <button className='button button3' onClick={() => bookingCancel(post.id)}  key={post.id}>Cancel {post.desk} {post.date.date} </button>
                 ))}
                 <p>* Click on the booked item above to cancel that booked spot</p>
 

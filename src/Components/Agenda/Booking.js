@@ -3,7 +3,7 @@ import axios from 'axios'
 import './Booking.css'
 import {AuthContext} from "../context/AuthContext";
 import { useHistory } from 'react-router-dom';
-
+import Confirmation from "../Confirmation/Confirmation";
 
 function Booking() {
     const [posts, setPosts]=useState([])
@@ -11,7 +11,6 @@ function Booking() {
     const [filter, setFilterDate]=useState([])
     const { user }  = useContext(AuthContext);
     const history = useHistory()
-
 
     async function getDates() {
         try {
@@ -22,7 +21,6 @@ function Booking() {
                     }}
             )
             setDates(userDates.data);  // set State
-
         } catch (err) {
             console.error(err.message);
         }
@@ -62,7 +60,7 @@ function Booking() {
     },[])
 
 
-    async function AgendaSubmit(id) {
+    function AgendaSubmit(id) {
         const data = {
             "id": `${id}`,
             "availability":"Unvailable",
@@ -115,24 +113,19 @@ function Booking() {
                 </div>
             </div>
 
-
-
             <div className='container'>
-                <h1>Then, pick a desk </h1>
+                <h1>Pick a desk </h1>
                 <h2>{filter}</h2>
                 {posts && posts.filter(post => post.date.date === filter).map(post=>(
-
                     <div key={post.id}>
                         { post.availability === 'Available' ?
-                            <button className='button button1' onClick={() => AgendaSubmit(post.id)} >{post.desk}  is available </button>
+                            <button className='button button1 ' onClick={() => AgendaSubmit(post.id)} >{post.desk}  is available </button>
                             :
                             <button className='button button3'>{post.desk} is unavailable </button>
                         }
                     </div>
-
                 ))}
             </div>
-
         </>
 
     );
