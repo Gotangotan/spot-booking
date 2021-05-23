@@ -5,21 +5,17 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import MainPage from "./Components/MainPage/MainPage";
-import LocationRotterdam from "./Components/LocationRotterdam/LocationRotterdam";
-import Agenda from "./Components/Agenda/Agenda";
-import AgendaPut from "./Components/Agenda/AgendaPut";
-import Booking from "./Components/Agenda/Booking";
-import Home from "./Components/MainPage/Home";
+
+import Alldesks from "./Components/Booking/Alldesks";
+import Booking from "./Components/Booking/Booking";
+import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import Profile from "./Components/Profile/Profile";
-import Dates from "./Components/Agenda/Dates";
+import Dates from "./Components/Booking/Dates";
 import Confirmation from "./Components/Confirmation/Confirmation";
 import Admin from "./Components/Admin/Admin";
-
-
 
 export default function BasicExample() {
     return (
@@ -39,17 +35,8 @@ export default function BasicExample() {
                     <Route path="/profile">
                         <Profile />
                     </Route>
-                    <Route exact path="/">
-                        <MainPage />
-                    </Route>
-                    <Route path="/book">
-                        <LocationRotterdam />
-                    </Route>
-                    <Route path="/agenda">
-                        <Agenda />
-                    </Route>
-                    <Route path="/agendaPut">
-                        <AgendaPut />
+                    <Route path="/alldesks">
+                        <Alldesks />
                     </Route>
                     <Route path="/Booking">
                         <Booking />
