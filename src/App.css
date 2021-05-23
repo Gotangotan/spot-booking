@@ -52,3 +52,13 @@ button.form-button {
     width: 100%;
 }
 
+.container{
+    width: 80%;
+    background-color: white;
+    border: 1px solid lightgrey;
+    margin: auto auto 20px auto;
+    padding: 50px;
+    text-align: center;
+}
+
+
