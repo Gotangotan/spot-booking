@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import { useForm } from "react-hook-form";
 import axios from "axios";
 
 function Admin(){
-    // const { handleSubmit, register } = useForm();
     const [ allDates,setDates ] = useState([])
     const [ allDesks,setDesks ] = useState([])
-    // const [ newDate,setNewDate] = useState([])
     const [filter, setFilterDate]=useState([])
 
     function selectDate(selectedDate){
@@ -14,14 +11,13 @@ function Admin(){
         console.log('filter',filter)
     }
 
-
     useEffect(() => {
         async function getDates(){
             try{
                 const response = await axios.get('http://localhost:8090/date/')
                 console.log('response.data',response.data)
                 setDates(response.data)
-                // console.log('allDates',allDates)
+
             }
             catch (e) {
                 console.error(e.message)
@@ -60,68 +56,11 @@ function Admin(){
         window.location.reload(false);
     }
 
-    // async function onSubmit (Dates) {
-    //
-    //         const data = { "date": Dates.date }
-    //
-    //         try {
-    //             const result = await axios.post('http://localhost:8090/date/', data)
-    //             console.log('data date',data.date)
-    //             console.log('result data',result)
-    //             setNewDate(data.date)
-    //             console.log('setNewDate',newDate)
-    //             addDesk()
-    //             window.location.reload(false);
-    //
-    //         }
-    //         catch (e) {
-    //             console.error(e.message)
-    //         }
-    //
-    //      }
-
-    // async function addDesk() {
-    //     const data = {
-    //         "availability": "Available",
-    //         "desk": "Desk1",
-    //         "date_id": '24'
-    //     }
-    //
-    //     try {
-    //         await axios.post('http://localhost:8090/desk/',data)
-    //     }
-    //     catch (e) {
-    //         console.error(e.message)
-    //     }
-    //
-    // }
-
     return(
         <>
             <div className='container'>
                 <h1>Hi Admin,</h1>
             </div>
-
-            {/*<div className='container'>*/}
-            {/*    <h2>Add add a new booking date</h2>*/}
-            {/*    <form className='form_signup' onSubmit={handleSubmit(onSubmit)}>*/}
-            {/*        <label htmlFor="date">*/}
-            {/*            <input*/}
-            {/*                type="text"*/}
-            {/*                id="date"*/}
-            {/*                name="date"*/}
-            {/*                placeholder='eg. 01-01-2021'*/}
-            {/*                {...register('date')}*/}
-            {/*            />*/}
-            {/*        </label>*/}
-            {/*        <button*/}
-            {/*            type="submit"*/}
-            {/*            className="button button1"*/}
-            {/*        >*/}
-            {/*            Create*/}
-            {/*        </button>*/}
-            {/*    </form>*/}
-            {/*</div>*/}
             <div className='container'>
                 <h1>Booking dates</h1>
                     {allDates && allDates.map(date=>(
@@ -150,9 +89,6 @@ function Admin(){
                     </div>
                 ))}
             </div>
-            {/*<div className='container'>*/}
-            {/*    <h2>Add remove desk to/from [dates]</h2>*/}
-            {/*</div>*/}
         </>
     )
 }

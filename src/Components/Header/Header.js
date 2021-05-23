@@ -24,12 +24,6 @@ function Header() {
           >
               Log out
           </button>
-        {/*<button*/}
-        {/*  type="button"*/}
-        {/*  onClick={() => history.push('/signup')}*/}
-        {/*>*/}
-        {/*  Registreren*/}
-        {/*</button>*/}
       </div>
     </header>
   );
