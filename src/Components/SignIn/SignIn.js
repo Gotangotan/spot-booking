@@ -14,8 +14,12 @@ function SignIn() {
   async function onSubmit(data) {
       // console.log('data input?',data)
         try{
-            const result = await axios.get('http://localhost:8090/users/'+data.username, {
-                username : data.username
+            const result = await axios.get(`https://localhost:8090/users/${data.username}`, {
+                auth: {
+                    username : data.username,
+                    password : data.password
+                }
+
             });
 
             console.log('result username?',result.data.username)
@@ -25,7 +29,7 @@ function SignIn() {
             }
 
             login(result.data.username)
-            // history.push('/Profile')
+            history.push('/Profile')
         }
         catch (e) {
             console.error(e)
@@ -48,15 +52,15 @@ function SignIn() {
                     />
                 </label>
 
-                {/*<label htmlFor="password-field">*/}
-                {/*    Wachtwoord:*/}
-                {/*    <input*/}
-                {/*        type="password"*/}
-                {/*        id="password-field"*/}
-                {/*        name="password"*/}
-                {/*        {...register("password")}*/}
-                {/*    />*/}
-                {/*</label>*/}
+                <label htmlFor="password-field">
+                    Wachtwoord:
+                    <input
+                        type="password"
+                        id="password-field"
+                        name="password"
+                        {...register("password")}
+                    />
+                </label>
                 <button
                     type="submit"
                     className="button button1"
