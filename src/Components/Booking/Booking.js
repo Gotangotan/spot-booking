@@ -1,9 +1,7 @@
 import React, {useContext, useEffect, useState,} from 'react'
 import axios from 'axios'
-import './Booking.css'
 import {AuthContext} from "../context/AuthContext";
 import { useHistory } from 'react-router-dom';
-import Confirmation from "../Confirmation/Confirmation";
 
 function Booking() {
     const [posts, setPosts]=useState([])

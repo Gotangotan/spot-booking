@@ -14,16 +14,9 @@ function AuthContextProvider({ children }) {
     });
 
     async function fetchUserData(userName){
-
-        //gebruikersdata ophalen
         try{
             const result = await axios.get(`http://localhost:8090/users/${userName}`, {
             });
-
-            // wat krijgen we binnen?
-            // console.log('result?',result)
-
-            // de date gebruiken om de context te vullen
             setAuthState({
                 user:{
                     username:result.data.username,
@@ -76,7 +69,7 @@ function AuthContextProvider({ children }) {
 
     return (
         <AuthContext.Provider value={data}>
-            { authState.status === 'done' ? children : <p>fout</p>
+            { authState.status === 'done' ? children : <p>...Loading</p>
             }
         </AuthContext.Provider>
     );

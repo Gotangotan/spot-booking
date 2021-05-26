@@ -10,6 +10,7 @@ function Confirmation(){
     const history = useHistory()
 
     async function getConfirmation() {
+
         try{
             const confirmation = await axios.get('http://localhost:8090/desk/', {
 
@@ -24,7 +25,7 @@ function Confirmation(){
         getConfirmation()
         const interval=setInterval(()=>{
             getConfirmation()
-        },2000)
+        },1500)
         return()=>clearInterval(interval)
     },[])
 

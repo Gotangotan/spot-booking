@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import './MainPage.css'
-import './Home.css'
+import { useHistory } from 'react-router-dom';
 
 
 function Home() {

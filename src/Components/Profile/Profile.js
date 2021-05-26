@@ -1,12 +1,11 @@
 import React, {useContext} from 'react';
 import { AuthContext } from "../context/AuthContext";
-import Booking from "../Agenda/Booking";
-import './Profile.css'
+import Booking from "../Booking/Booking";
+
 
 
 function Profile() {
     const { user }  = useContext( AuthContext );
-    // console.log('user?',user)
     return (
         <>
             <div className='container'>

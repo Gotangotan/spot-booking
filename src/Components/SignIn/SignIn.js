@@ -25,7 +25,7 @@ function SignIn() {
             }
 
             login(result.data.username)
-            history.push('/Profile')
+            // history.push('/Profile')
         }
         catch (e) {
             console.error(e)
