@@ -12,9 +12,9 @@ function Booking() {
 
     async function getDates() {
         try {
-            const userDates = await axios.get("http://localhost:8090/date",
+            const userDates = await axios.get("https://localhost:8090/date",
                 {auth:{
-                        username: 'tan',
+                        username: 'admin',
                         password: 'password'
                     }}
             )
@@ -30,9 +30,9 @@ function Booking() {
 
     async function getPosts() {
         try {
-            const userPosts = await axios.get("http://localhost:8090/desk",
+            const userPosts = await axios.get("https://localhost:8090/desk",
                 {auth:{
-                        username: 'tan',
+                        username: 'admin',
                         password: 'password'
                     }}
             )
@@ -66,7 +66,7 @@ function Booking() {
             "email": `${user.email}`
         }
 
-        axios.put(`http://localhost:8090/desk/${data.id}`,data,                {auth:{
+        axios.put(`https://localhost:8090/desk/${data.id}`,data,                {auth:{
                 username: 'admin',
                 password: 'password'
             }})
@@ -82,7 +82,7 @@ function Booking() {
             "id": `${id}`,
             "availability":"Available"}
 
-        axios.put(`http://localhost:8090/desk/${data.id}`,data,{auth:{
+        axios.put(`https://localhost:8090/desk/${data.id}`,data,{auth:{
                 username: 'admin',
                 password: 'password'
             }}

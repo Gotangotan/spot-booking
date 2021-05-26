@@ -13,14 +13,21 @@ function AuthContextProvider({ children }) {
         status: 'pending',
     });
 
+
     async function fetchUserData(userName){
+        console.log('userName',userName)
         try{
-            const result = await axios.get(`http://localhost:8090/users/${userName}`, {
+            const result = await axios.get(`https://localhost:8090/users/${userName}`, {
+                auth: {
+                    username: 'admin',
+                    password: 'password'
+                }
             });
             setAuthState({
                 user:{
                     username:result.data.username,
-                    email:result.data.email,
+                    password:result.data.username,
+                    email:result.data.email
                 },
                 status: 'done'
             })

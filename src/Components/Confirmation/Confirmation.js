@@ -34,7 +34,7 @@ function Confirmation(){
             "id": `${id}`,
             "availability":"Available"}
 
-        axios.put(`http://localhost:8090/desk/${data.id}`,data,{auth:{
+        axios.put(`https://localhost:8090/desk/${data.id}`,data,{auth:{
                 username: 'admin',
                 password: 'password'
             }}
