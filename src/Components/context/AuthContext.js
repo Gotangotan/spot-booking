@@ -15,7 +15,7 @@ function AuthContextProvider({ children }) {
 
 
     async function fetchUserData(userName){
-        console.log('userName',userName)
+
         try{
             const result = await axios.get(`https://localhost:8090/users/${userName}`, {
                 auth: {

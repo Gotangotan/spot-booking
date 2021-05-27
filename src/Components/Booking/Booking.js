@@ -16,7 +16,8 @@ function Booking() {
                 {auth:{
                         username: user.username,
                         password: user.password
-                    }}
+                    }
+                }
             )
             console.log('user.username',user.username)
             setDates(userDates.data);  // set State
