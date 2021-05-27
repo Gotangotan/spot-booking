@@ -8,7 +8,6 @@ import {
 
 
 import Booking from "./Components/Booking/Booking";
-import Alldesks from "./Components/Booking/Alldesks";
 import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import SignIn from "./Components/SignIn/SignIn";
@@ -35,9 +34,6 @@ export default function BasicExample() {
                     </Route>
                     <Route path="/profile">
                         <Profile />
-                    </Route>
-                    <Route path="/alldesks">
-                        <Alldesks />
                     </Route>
                     <Route path="/Booking">
                         <Booking />

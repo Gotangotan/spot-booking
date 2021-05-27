@@ -8,14 +8,18 @@ function Admin(){
 
     function selectDate(selectedDate){
         setFilterDate(selectedDate)
-        console.log('filter',filter)
     }
 
     useEffect(() => {
         async function getDates(){
             try{
-                const response = await axios.get('http://localhost:8090/date/')
-                console.log('response.data',response.data)
+                const response = await axios.get('https://localhost:8090/date/',{
+                    auth: {
+                        username : "admin",
+                        password : "password"
+                    }
+                })
+
                 setDates(response.data)
 
             }
@@ -29,7 +33,12 @@ function Admin(){
     useEffect(() => {
         async function getDesks(){
             try{
-                const results = await axios.get('http://localhost:8090/desk/')
+                const results = await axios.get('https://localhost:8090/desk/',{
+                    auth: {
+                        username : "admin",
+                        password : "password"
+                    }
+                })
                 console.log('results.data',results.data)
                 setDesks(results.data)
             }
