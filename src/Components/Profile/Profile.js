@@ -1,11 +1,11 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { AuthContext } from "../context/AuthContext";
 import Booking from "../Booking/Booking";
 
 
-
 function Profile() {
     const { user }  = useContext( AuthContext );
+
     return (
         <>
             <div className='container'>
@@ -13,7 +13,6 @@ function Profile() {
                 <p><strong>Email: { user && user.email }</strong> </p>
             </div>
             <Booking/>
-
         </>
     );
 }

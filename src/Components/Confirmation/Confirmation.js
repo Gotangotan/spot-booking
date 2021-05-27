@@ -10,19 +10,13 @@ function Confirmation(){
     const history = useHistory()
 
     async function getConfirmation() {
-
         try{
             const confirmation = await axios.get('https://localhost:8090/desk/', {
-
-                auth:{
-                    username: 'admin',
-                    password: 'password'
-                }
-
-            }
-
-            )
-
+                    auth:{
+                        username: user.username,
+                        password: user.password
+                    }
+            })
             setUserConfirmation(confirmation.data)
         }
         catch (e) {
@@ -43,8 +37,8 @@ function Confirmation(){
             "availability":"Available"}
 
         axios.put(`https://localhost:8090/desk/${data.id}`,data,{auth:{
-                username: 'admin',
-                password: 'password'
+                username: user.username,
+                password: user.password
             }}
         )
 

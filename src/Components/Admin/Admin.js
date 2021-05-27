@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import axios from "axios";
+import {AuthContext} from "../context/AuthContext";
 
 function Admin(){
     const [ allDates,setDates ] = useState([])
     const [ allDesks,setDesks ] = useState([])
     const [filter, setFilterDate]=useState([])
+    const { user }  = useContext( AuthContext );
 
     function selectDate(selectedDate){
         setFilterDate(selectedDate)
@@ -14,14 +16,12 @@ function Admin(){
         async function getDates(){
             try{
                 const response = await axios.get('https://localhost:8090/date/',{
-                    auth: {
-                        username : "admin",
-                        password : "password"
+                    auth:{
+                        username: 'admin',
+                        password: 'password'
                     }
                 })
-
                 setDates(response.data)
-
             }
             catch (e) {
                 console.error(e.message)

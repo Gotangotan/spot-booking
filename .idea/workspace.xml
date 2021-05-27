@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="684c1d0e-b127-4dbe-a9c4-7a1d4dcaac85" name="Default Changelist" comment="change all admin fucntions to https">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Admin/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Booking/Alldesks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Booking/Booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Booking/Booking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Confirmation/Confirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Confirmation/Confirmation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SignIn/SignIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SignIn/SignIn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/context/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/context/AuthContext.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,7 @@
       <workItem from="1622058342403" duration="58000" />
       <workItem from="1622058646968" duration="8000" />
       <workItem from="1622061009033" duration="81000" />
-      <workItem from="1622061184358" duration="5409000" />
+      <workItem from="1622061184358" duration="8345000" />
     </task>
     <task id="LOCAL-00001" summary="creating project, adding first page and navbar,switch,route, install react-router-dom">
       <created>1619156808705</created>
@@ -315,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622063046728</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="change all admin fucntions to https">
+      <created>1622102024638</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1622102024638</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +375,12 @@
           <url>file://$PROJECT_DIR$/src/Components/context/AuthContext.js</url>
           <line>71</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/Profile/Profile.js</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

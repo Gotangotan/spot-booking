@@ -26,7 +26,7 @@ function AuthContextProvider({ children }) {
             setAuthState({
                 user:{
                     username:result.data.username,
-                    password:result.data.username,
+                    password:result.data.password,
                     email:result.data.email
                 },
                 status: 'done'
