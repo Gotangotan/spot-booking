@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="684c1d0e-b127-4dbe-a9c4-7a1d4dcaac85" name="Default Changelist" comment="change all admin functions to https">
+    <list default="true" id="684c1d0e-b127-4dbe-a9c4-7a1d4dcaac85" name="Default Changelist" comment="fix booking get">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Booking/Booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Booking/Booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Booking/Dates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Booking/Dates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Confirmation/Confirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Confirmation/Confirmation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SignIn/SignIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/context/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/context/AuthContext.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +111,7 @@
       <workItem from="1622058342403" duration="58000" />
       <workItem from="1622058646968" duration="8000" />
       <workItem from="1622061009033" duration="81000" />
-      <workItem from="1622061184358" duration="9218000" />
+      <workItem from="1622061184358" duration="24551000" />
     </task>
     <task id="LOCAL-00001" summary="creating project, adding first page and navbar,switch,route, install react-router-dom">
       <created>1619156808705</created>
@@ -326,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622104905469</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix booking get">
+      <created>1622105757821</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1622105757821</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +356,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="axios GET,PUT" />
     <MESSAGE value="Add styling to pages" />
     <MESSAGE value="Create homepage" />
     <MESSAGE value="Install react-hook-form dependency" />
@@ -370,14 +380,15 @@
     <MESSAGE value="change all async functios to https" />
     <MESSAGE value="change all admin fucntions to https" />
     <MESSAGE value="change all admin functions to https" />
-    <option name="LAST_COMMIT_MESSAGE" value="change all admin functions to https" />
+    <MESSAGE value="fix booking get" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix booking get" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Components/context/AuthContext.js</url>
-          <line>71</line>
+          <line>76</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

@@ -13,8 +13,8 @@ function Confirmation(){
         try{
             const confirmation = await axios.get('https://localhost:8090/desk/', {
                     auth:{
-                        username: user.username,
-                        password: user.password
+                        username: "admin",
+                        password: "password"
                     }
             })
             setUserConfirmation(confirmation.data)
@@ -37,8 +37,8 @@ function Confirmation(){
             "availability":"Available"}
 
         axios.put(`https://localhost:8090/desk/${data.id}`,data,{auth:{
-                username: user.username,
-                password: user.password
+                username: "admin",
+                password: "password"
             }}
         )
 

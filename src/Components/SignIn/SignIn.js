@@ -8,33 +8,42 @@ import './SignIn.css'
 function SignIn() {
     const { login } = useContext(AuthContext)
     const { handleSubmit, register } = useForm();
+    const signup = useHistory()
     const history = useHistory()
+
+
+
+
 
 
   async function onSubmit(data) {
       // console.log('data input?',data)
+      // console.log(data.username)
+      // console.log(data.password)
         try{
             const result = await axios.get(`https://localhost:8090/users/${data.username}`, {
                 auth: {
-                    username : data.username,
-                    password : data.password
+                    username: "admin",
+                    password: "password"
                 }
-
             });
-
-            console.log('result username?',result.data.username)
-            console.log('input username?',data.username)
+            // console.log('result username?',result.data.username)
+            // console.log('result password?',result.data.password)
             if (result.data.username === data.username){
                 console.log('known');
             }
-
+            // console.log('result?',result.data.username)
             login(result.data.username)
+
             history.push('/Profile')
+
         }
         catch (e) {
             console.error(e)
         }
     }
+
+
 
     return (
         <>
@@ -53,7 +62,7 @@ function SignIn() {
                 </label>
 
                 <label htmlFor="password-field">
-                    Wachtwoord:
+                    Password:
                     <input
                         type="password"
                         id="password-field"
@@ -78,7 +87,7 @@ function SignIn() {
                 <button
                     className='button button1'
                     type="button"
-                    onClick={() => history.push('/signup')}
+                    onClick={() => signup.push('/signup')}
                 >
                     Sign up
                 </button>

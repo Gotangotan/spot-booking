@@ -1,12 +1,13 @@
-import React, {createContext, useEffect, useState} from "react";
+import React, {createContext, useContext, useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
 import axios from "axios";
-
 
 export const AuthContext = createContext({})
 
 
 function AuthContextProvider({ children }) {
+    const login = useHistory()
+    const logout = useHistory()
     const history = useHistory()
     const [authState, setAuthState] = useState({
         user: null,
@@ -15,37 +16,41 @@ function AuthContextProvider({ children }) {
 
 
     async function fetchUserData(userName){
-
+        // console.log('userName',userName)
         try{
             const result = await axios.get(`https://localhost:8090/users/${userName}`, {
                 auth: {
-                    username: 'admin',
-                    password: 'password'
+                    username: "admin",
+                    password: "password"
                 }
             });
+            // console.log('axios result?',result)
+            // console.log('result.data.username',result.data.username)
+            // console.log('result.data.password',result.data.password)
+
             setAuthState({
                 user:{
-                    username:result.data.username,
-                    password:result.data.password,
-                    email:result.data.email
+                    username: result.data.username,
+                    password: result.data.password,
+                    email: result.data.email
                 },
                 status: 'done'
             })
-            // console.log('setAuthState?',setAuthState)
+            // console.log('setAuthState?',authState)
         }
         catch (e) {
             console.error(e)
         }
+
     }
+
 
 
     // wanneer de applicatie geladen wordt willen we checken of er een user is
     useEffect(()=>{
         // is er een user?
         const user = localStorage.getItem('user');
-        if (user !== undefined){
-            // console.log('er is een user')
-        }
+
         // haal dan de data op
         fetchUserData(user)
 
@@ -53,7 +58,7 @@ function AuthContextProvider({ children }) {
         setAuthState({
             user: null,
             status: 'done',
-        });
+        })
     },[]);
 
     async function loginFunction(userName){
@@ -64,7 +69,7 @@ function AuthContextProvider({ children }) {
     function logoutFunction(){
         // localstorage leeghalen
         localStorage.clear()
-        history.push('/')
+        logout.push('/')
         // user in de context weer op null zetten
     }
 

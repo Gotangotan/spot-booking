@@ -28,8 +28,8 @@ function Dates() {
 
     return(
         <div >
-            {error && <p>{error}</p>}
-            {loading && <p>Data wordt geladen...</p>}
+            {error && <p>{error}</p>}            {loading && <p>Data wordt geladen...</p>}
+
             {dates && dates.map((datum) => {
                 return <p onClick={()=> toDesk(datum.date)} key={datum.date}>{datum.date}</p>
             })}
