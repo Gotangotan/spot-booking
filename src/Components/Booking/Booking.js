@@ -1,9 +1,7 @@
 import React, {useContext, useEffect, useState,} from 'react'
 import axios from 'axios'
-import './Booking.css'
 import {AuthContext} from "../context/AuthContext";
 import { useHistory } from 'react-router-dom';
-import Confirmation from "../Confirmation/Confirmation";
 
 function Booking() {
     const [posts, setPosts]=useState([])
@@ -11,21 +9,35 @@ function Booking() {
     const [filter, setFilterDate]=useState([])
     const { user }  = useContext(AuthContext);
     const history = useHistory()
+    const { login } = useContext(AuthContext)
 
 
-    async function getDates() {
-        try {
-            const userDates = await axios.get("http://localhost:8090/date",
-                {auth:{
-                        username: 'tan',
-                        password: 'password'
-                    }}
-            )
-            setDates(userDates.data);  // set State
-        } catch (err) {
-            console.error(err.message);
+
+
+    useEffect(()=>{
+        async function getDates() {
+            // console.log('user?',user)
+            try {
+                const userDates = await axios.get("https://localhost:8090/date",
+                    {
+                        auth:{
+                            username: "admin",
+                            password: "password"
+                        }
+                    }
+                )
+                // console.log('user.username',user.username)
+                setDates(userDates.data);  // set State
+            } catch (err) {
+                console.error(err.message);
+            }
         }
-    }
+
+        getDates()
+    },[])
+
+
+
 
     function selectDate(selectedDate){
         setFilterDate(selectedDate)
@@ -33,12 +45,13 @@ function Booking() {
 
     async function getPosts() {
         try {
-            const userPosts = await axios.get("http://localhost:8090/desk",
+            const userPosts = await axios.get("https://localhost:8090/desk",
                 {auth:{
-                        username: 'tan',
-                        password: 'password'
+                        username: "admin",
+                        password: "password"
                     }}
             )
+
             setPosts(userPosts.data);  // set State
             console.log('posts',setPosts)
         } catch (err) {
@@ -46,9 +59,7 @@ function Booking() {
         }
     }
 
-    useEffect(()=>{
-        getDates()
-    },[])
+
 
     useEffect(()=>{
         getPosts()
@@ -69,9 +80,9 @@ function Booking() {
             "email": `${user.email}`
         }
 
-        axios.put(`http://localhost:8090/desk/${data.id}`,data,                {auth:{
-                username: 'admin',
-                password: 'password'
+        axios.put(`https://localhost:8090/desk/${data.id}`,data,                {auth:{
+                username: "admin",
+                password: "password"
             }})
             .catch((err) => {
                 console.log(err);
@@ -85,9 +96,9 @@ function Booking() {
             "id": `${id}`,
             "availability":"Available"}
 
-        axios.put(`http://localhost:8090/desk/${data.id}`,data,{auth:{
-                username: 'admin',
-                password: 'password'
+        axios.put(`https://localhost:8090/desk/${data.id}`,data,{auth:{
+                username: "admin",
+                password: "password"
             }}
         )
             .then((data) => {
@@ -102,6 +113,7 @@ function Booking() {
         <>
             <div className='container'>
                 <h1>First, when would you like to come to the office?</h1>
+
                 <div className='parent'>
                     {dates && dates.map(date=>(
                         <button
@@ -114,13 +126,10 @@ function Booking() {
                 </div>
             </div>
 
-
-
             <div className='container'>
                 <h1>Pick a desk </h1>
                 <h2>{filter}</h2>
                 {posts && posts.filter(post => post.date.date === filter).map(post=>(
-
                     <div key={post.id}>
                         { post.availability === 'Available' ?
                             <button className='button button1' onClick={() => AgendaSubmit(post.id)} >{post.desk}  is available </button>
@@ -128,10 +137,8 @@ function Booking() {
                             <button className='button button3'>{post.desk} is unavailable </button>
                         }
                     </div>
-
                 ))}
             </div>
-
         </>
 
     );

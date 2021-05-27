@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import './MainPage.css'
-import './Home.css'
+import { useHistory } from 'react-router-dom';
 
 
 function Home() {
@@ -12,6 +10,7 @@ function Home() {
             <h1>Welcome to the Spot booking tool</h1>
             <p>Through this website you can reserve a desk at the office.</p>
             <button
+                className='button button1'
                 type="button"
                 onClick={() => history.push('/signin')}
             >
@@ -19,6 +18,7 @@ function Home() {
             </button>
 
             <button
+                className='button button1'
                 type="button"
                 onClick={() => history.push('/signup')}
             >

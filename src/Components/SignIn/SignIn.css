@@ -1,8 +1,8 @@
-.container{
+.container_signup {
     width: 80%;
-    background-color: #white;
+    background-color: white;
     border: 1px solid lightgrey;
-    margin: auto;
+    margin: auto auto 20px auto;
     padding: 50px;
 }
 
@@ -59,4 +59,32 @@
 .button3:hover {
     background-color: #f44336;
     color: white;
+}
+
+.form_signup {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 32px;
+    width: 300px;
+    border-radius: 4px;
+    margin: auto;
+
+}
+
+input[type=text], input[type=password],input[type=date], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+
+h2 {
+    margin: 32px 0 0 0 ;
 }

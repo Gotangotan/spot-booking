@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="684c1d0e-b127-4dbe-a9c4-7a1d4dcaac85" name="Default Changelist" comment="fix booking get">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Booking/Booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Booking/Booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Booking/Dates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Booking/Dates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Confirmation/Confirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Confirmation/Confirmation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SignIn/SignIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/context/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/context/AuthContext.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../spot-booking\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release_0.1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Components/Booking/Booking.js" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1rXKI3KyOLoJWA73SM5dxtQ0uIU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gerar\Desktop\Oplevering\03. Broncode frontend\nieuw\spot-booking\src\Components" />
+      <recent name="C:\Users\gerar\Desktop\Oplevering\03. Broncode frontend\nieuw\spot-booking\src\Components\Booking" />
+      <recent name="C:\Users\tanng\OneDrive\Bureaublad\NOVI\Eindopdracht\Deelopdracht 3. Programmeerfase - frontend\spot-booking\src\Components\MainPage" />
+      <recent name="C:\Users\tanng\OneDrive\Bureaublad\NOVI\Eindopdracht\Deelopdracht 3. Programmeerfase - frontend\spot-booking\src\Components\Agenda" />
+      <recent name="C:\Users\tanng\OneDrive\Bureaublad\NOVI\Eindopdracht\Deelopdracht 3. Programmeerfase - frontend\spot-booking\src\Components\Profile" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tanng\OneDrive\Bureaublad\NOVI\Eindopdracht\Deelopdracht 3. Programmeerfase - frontend\spot-booking\src\Components\Navbar" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="684c1d0e-b127-4dbe-a9c4-7a1d4dcaac85" name="Default Changelist" comment="" />
+      <created>1619116911503</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619116911503</updated>
+      <workItem from="1619116913114" duration="2284000" />
+      <workItem from="1619154871979" duration="13307000" />
+      <workItem from="1619345482313" duration="3000" />
+      <workItem from="1619690891243" duration="3000" />
+      <workItem from="1619790331909" duration="6715000" />
+      <workItem from="1619880195742" duration="5190000" />
+      <workItem from="1619943216685" duration="15791000" />
+      <workItem from="1620118282835" duration="9805000" />
+      <workItem from="1620552838646" duration="1396000" />
+      <workItem from="1620566472931" duration="7284000" />
+      <workItem from="1620928865898" duration="23832000" />
+      <workItem from="1621173091334" duration="50112000" />
+      <workItem from="1621512610561" duration="19736000" />
+      <workItem from="1621583358640" duration="54587000" />
+      <workItem from="1622037319984" duration="6926000" />
+      <workItem from="1622057310481" duration="4000" />
+      <workItem from="1622057505711" duration="31000" />
+      <workItem from="1622058342403" duration="58000" />
+      <workItem from="1622058646968" duration="8000" />
+      <workItem from="1622061009033" duration="81000" />
+      <workItem from="1622061184358" duration="24551000" />
+    </task>
+    <task id="LOCAL-00001" summary="creating project, adding first page and navbar,switch,route, install react-router-dom">
+      <created>1619156808705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619156808705</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated favicon">
+      <created>1619159538463</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619159538463</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create booking page/components">
+      <created>1619175226905</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619175226905</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added checkbox styling">
+      <created>1619175568725</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619175568725</updated>
+    </task>
+    <task id="LOCAL-00005" summary="axios GET,PUT">
+      <created>1620153611364</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620153611364</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add styling to pages">
+      <created>1620987217189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620987217190</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add styling to pages">
+      <created>1620993205401</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620993205402</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Create homepage">
+      <created>1621173725464</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621173725464</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added signin/signup page">
+      <created>1621174006404</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621174006404</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added  history.push('/Profile')">
+      <created>1621283215201</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1621283215201</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added login() to SignIn.js">
+      <created>1621283454375</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621283454375</updated>
+    </task>
+    <task id="LOCAL-00012" summary="moved localStorage.setItem('user',userName) to AuthContext.js">
+      <created>1621283578987</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1621283578987</updated>
+    </task>
+    <task id="LOCAL-00013" summary="moved history.push('/Profile') to AuthContext.js">
+      <created>1621283768297</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1621283768297</updated>
+    </task>
+    <task id="LOCAL-00014" summary="moved history.push('/Profile') to AuthContext.js">
+      <created>1621344765294</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1621344765295</updated>
+    </task>
+    <task id="LOCAL-00015" summary="store username">
+      <created>1621357227860</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1621357227860</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add username and email to post">
+      <created>1621357413925</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1621357413925</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add useEffect to AuthContext.js">
+      <created>1621453613799</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621453613799</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add datefilter">
+      <created>1621538069166</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1621538069166</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add conditional rendering for Pick a desk">
+      <created>1621543996987</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1621543996987</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add styling to pick a seat button">
+      <created>1621544789589</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1621544789589</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add confirmation page">
+      <created>1621604521890</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1621604521890</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added logout function">
+      <created>1621608686690</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1621608686690</updated>
+    </task>
+    <task id="LOCAL-00023" summary="intial admin page creates">
+      <created>1621625685243</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1621625685243</updated>
+    </task>
+    <task id="LOCAL-00024" summary="create newdate fucntion for admi">
+      <created>1621631393186</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1621631393186</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added admin functions">
+      <created>1621702817478</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1621702817478</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Readme updated">
+      <created>1621703754161</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1621703754161</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Readme updated">
+      <created>1622061552108</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1622061552108</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Login HTTPS update">
+      <created>1622061770685</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1622061770685</updated>
+    </task>
+    <task id="LOCAL-00029" summary="change all async functios to https">
+      <created>1622063046728</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1622063046728</updated>
+    </task>
+    <task id="LOCAL-00030" summary="change all admin fucntions to https">
+      <created>1622102024638</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1622102024638</updated>
+    </task>
+    <task id="LOCAL-00031" summary="change all admin functions to https">
+      <created>1622104905469</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1622104905469</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fix booking get">
+      <created>1622105757821</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1622105757821</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add styling to pages" />
+    <MESSAGE value="Create homepage" />
+    <MESSAGE value="Install react-hook-form dependency" />
+    <MESSAGE value="added signin/signup page" />
+    <MESSAGE value="added  history.push('/Profile')" />
+    <MESSAGE value="added login() to SignIn.js" />
+    <MESSAGE value="moved localStorage.setItem('user',userName) to AuthContext.js" />
+    <MESSAGE value="moved history.push('/Profile') to AuthContext.js" />
+    <MESSAGE value="store username" />
+    <MESSAGE value="add username and email to post" />
+    <MESSAGE value="add useEffect to AuthContext.js" />
+    <MESSAGE value="add datefilter" />
+    <MESSAGE value="add conditional rendering for Pick a desk" />
+    <MESSAGE value="add styling to pick a seat button" />
+    <MESSAGE value="add confirmation page" />
+    <MESSAGE value="added logout function" />
+    <MESSAGE value="intial admin page creates" />
+    <MESSAGE value="create newdate fucntion for admi" />
+    <MESSAGE value="Added admin functions" />
+    <MESSAGE value="Readme updated" />
+    <MESSAGE value="Login HTTPS update" />
+    <MESSAGE value="change all async functios to https" />
+    <MESSAGE value="change all admin fucntions to https" />
+    <MESSAGE value="change all admin functions to https" />
+    <MESSAGE value="fix booking get" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix booking get" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/context/AuthContext.js</url>
+          <line>76</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/Profile/Profile.js</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
