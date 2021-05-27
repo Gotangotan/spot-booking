@@ -10,6 +10,7 @@ function Confirmation(){
     const history = useHistory()
 
     async function getConfirmation() {
+
         try{
             const confirmation = await axios.get('https://localhost:8090/desk/', {
                     auth:{
